@@ -1,0 +1,67 @@
+/* Centraliza todo o conteúdo da página */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#board {
+    display: grid;
+    /* Tamanho aumentado em 25% (de 100px para 125px) */
+    grid-template-columns: repeat(3, 125px);
+    grid-template-rows: repeat(3, 125px);
+    gap: 8px; /* Aumentei o espaço levemente para acompanhar o tamanho */
+    margin-bottom: 20px;
+}
+
+#board div {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em; /* Aumentei a fonte para combinar com o novo tamanho */
+    cursor: pointer;
+    width: 125px;
+    height: 125px;
+    border: 2px solid #333;
+    border-radius: 8px; /* Bordas arredondadas para um visual moderno */
+    transition: background-color 0.2s;
+}
+
+#board div:hover {
+    background-color: #e0e0e0;
+}
+
+#game-info {
+    text-align: center;
+}
+
+#status {
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Estilo para o botão de reset */
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
